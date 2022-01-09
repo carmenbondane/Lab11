@@ -38,12 +38,12 @@ namespace GrpcCustomersService {
         __Marshaller_customer_Customer,
         __Marshaller_customer_Empty);
 
-    static readonly grpc::Method<global::GrpcCustomersService.Customer, global::GrpcCustomersService.Customer> __Method_Update = new grpc::Method<global::GrpcCustomersService.Customer, global::GrpcCustomersService.Customer>(
+    static readonly grpc::Method<global::GrpcCustomersService.Customer, global::GrpcCustomersService.Empty> __Method_Update = new grpc::Method<global::GrpcCustomersService.Customer, global::GrpcCustomersService.Empty>(
         grpc::MethodType.Unary,
         __ServiceName,
         "Update",
         __Marshaller_customer_Customer,
-        __Marshaller_customer_Customer);
+        __Marshaller_customer_Empty);
 
     static readonly grpc::Method<global::GrpcCustomersService.CustomerId, global::GrpcCustomersService.Empty> __Method_Delete = new grpc::Method<global::GrpcCustomersService.CustomerId, global::GrpcCustomersService.Empty>(
         grpc::MethodType.Unary,
@@ -77,7 +77,7 @@ namespace GrpcCustomersService {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
 
-      public virtual global::System.Threading.Tasks.Task<global::GrpcCustomersService.Customer> Update(global::GrpcCustomersService.Customer request, grpc::ServerCallContext context)
+      public virtual global::System.Threading.Tasks.Task<global::GrpcCustomersService.Empty> Update(global::GrpcCustomersService.Customer request, grpc::ServerCallContext context)
       {
         throw new grpc::RpcException(new grpc::Status(grpc::StatusCode.Unimplemented, ""));
       }
@@ -110,7 +110,7 @@ namespace GrpcCustomersService {
       serviceBinder.AddMethod(__Method_GetAll, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcCustomersService.Empty, global::GrpcCustomersService.CustomerList>(serviceImpl.GetAll));
       serviceBinder.AddMethod(__Method_Get, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcCustomersService.CustomerId, global::GrpcCustomersService.Customer>(serviceImpl.Get));
       serviceBinder.AddMethod(__Method_Insert, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcCustomersService.Customer, global::GrpcCustomersService.Empty>(serviceImpl.Insert));
-      serviceBinder.AddMethod(__Method_Update, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcCustomersService.Customer, global::GrpcCustomersService.Customer>(serviceImpl.Update));
+      serviceBinder.AddMethod(__Method_Update, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcCustomersService.Customer, global::GrpcCustomersService.Empty>(serviceImpl.Update));
       serviceBinder.AddMethod(__Method_Delete, serviceImpl == null ? null : new grpc::UnaryServerMethod<global::GrpcCustomersService.CustomerId, global::GrpcCustomersService.Empty>(serviceImpl.Delete));
     }
 
